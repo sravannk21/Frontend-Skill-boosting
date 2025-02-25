@@ -1,55 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>box model sample</title>
 </head>
 <style>
-    *{
-        margin:0;
-        padding:0;
+    * {
+        margin: 0;
+        padding: 0;
         box-sizing: border-box;
     }
-    .heading{
+
+    .heading {
         color: green;
         font-family: 'Courier New', Courier, monospace;
         padding-bottom: 20px;
     }
-    .subHeading{
+
+    .subHeading {
         color: green;
         padding-bottom: 20px;
     }
-    p{
+
+    p {
         color: black;
         text-align: justify;
         padding-bottom: 20px;
     }
-    img{
+
+    img {
         width: 300px;
     }
-    .user{
+
+    .user {
         width: 200px;
         border-radius: 25%;
     }
-    #usrName{
+
+    #usrName {
         color: brown;
         font-weight: bold;
     }
+
+    .container {
+        width: 1140px;
+        margin: 20px auto 0 auto;
+    }
+    .blogPost{
+        width: 75%;
+        float:left;
+        padding-right: 20px;
+    }
+    .otherPosts{
+        width:25%;
+        float:left;
+    }
+    .clearfix::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .authorBox{
+        border-top: 1px solid #888888;
+        padding-top: 20px;
+    }
 </style>
+
 <body>
-    <h1 class="heading">My first blogpost</h1>
-    <h2 class="subHeading">this is my first blogpost</h2>
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-    </p>
-    <img src="./images/Logo HTML5.JPG" alt="html">
-    <a href="https://www.google.com">search</a>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati perferendis eum ducimus beatae, minus odio aspernatur corrupti laudantium. Dolore sed molestiae velit iste, aliquid recusandae? Explicabo labore eius reiciendis debitis!
-    </p>
-    <img src="./images/user.jpg" class="user" alt="user">
-    <p id="usrName">user name</p>
+    <div class="container">
+        <div class="blogPost">
+            <h1 class="heading">My first blogpost</h1>
+            <h2 class="subHeading">this is my first blogpost</h2>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Aldus PageMaker including versions of Lorem Ipsum.
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of
+                letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+                desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+                search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
+                evolved
+                over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            </p>
+            <img src="./images/Logo HTML5.JPG" alt="html">
+            <a href="https://www.google.com">search</a>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati perferendis eum ducimus beatae,
+                minus
+                odio aspernatur corrupti laudantium. Dolore sed molestiae velit iste, aliquid recusandae? Explicabo
+                labore
+                eius reiciendis debitis!
+            </p>
+        </div>
+        <div class="otherPosts">
+            dummy post
+        </div>
+        <div class="clearfix"></div>
+        <div class="authorBox">
+            <img src="./images/user.jpg" class="user" alt="user">
+            <p id="usrName">user name</p>
+        </div>
+    </div>
+
 </body>
+
 </html>
